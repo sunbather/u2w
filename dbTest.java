@@ -14,10 +14,10 @@ public class dbTest {
       String password = args[1];
       conn = DriverManager.getConnection("jdbc:datadirect:oracle://192.168.0.221:1521;ServiceName=orcl;User=" + user +";password=" + password);
       stmt = conn.createStatement();
-      query = "select * from tmp_demo where rownum <= 1";
+      query = "select * from tb_esero where rownum <= 1";
       rs = stmt.executeQuery(query);
       while (rs.next()) {
-        System.out.println("id : " + rs.getString("id"));
+        System.out.println("aprv_no : " + rs.getString("aprv_no"));
       }
       rs.close();
       stmt.close();
