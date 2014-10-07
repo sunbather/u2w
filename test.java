@@ -1,12 +1,12 @@
-import java.util.*;
 import java.sql.*;
 
 public class dbTest {
-  
+
   public static void main(String[] args) throws Exception {
-    Conncection conn = null;
+    Connection conn = null;    
     Statement stmt = null;
-    Resultset rs = null;
+    ResultSet rs = null;
+    String query = null;
     
     try {
       Class.forName("com.ddtek.jdbc.oracle.OracleDriver");
@@ -26,7 +26,8 @@ public class dbTest {
       e.printStackTrace();
     }
   }
-}  
+}
+
   
   
   
